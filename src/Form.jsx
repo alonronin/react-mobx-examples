@@ -2,20 +2,13 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 
-@observer
-class Form extends Component {
-  constructor(props) {
-    super(props);
-  }
+function Form({name, setName}) {
+  return <form>
+    <label>Name:</label>
+    <input type="text" value={name} onChange={e => setName(e.target.value)} />
 
-  render() {
-    return <form>
-      <label>Name:</label>
-      <input type="text" value={this.props.name} onChange={e => this.props.setName(e.target.value)} />
-
-      <p>{this.props.name}</p>
-    </form>
-  }
+    <p>{name}</p>
+  </form>
 }
 
-export default Form;
+export default observer(Form);
