@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = module.exports = {
   entry: {
-    bundle: './',
+    bundle: './side-effect',
     vendors: Object.keys(pkg.dependencies)
   },
 
