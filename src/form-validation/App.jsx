@@ -6,8 +6,8 @@ import Form from './Form';
 
 function App({store}) {
   return <div>
-    <h1>React + MobX + Webpack Boilerplate</h1>
-    <Form name={store.name} error={store.error} setName={store.setName} />
+    <h1>Form Validation</h1>
+    <Form />
   </div>
 }
 

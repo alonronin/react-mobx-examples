@@ -7,6 +7,7 @@ const config = module.exports = {
   entry: {
     'side-effect': './side-effect',
     'simple-app': './simple-app',
+    'form-validation': './form-validation',
     vendors: Object.keys(pkg.dependencies)
   },
 

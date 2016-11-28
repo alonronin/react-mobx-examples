@@ -1,5 +1,3 @@
-'use strict';
-
 import {observable, action, autorun} from 'mobx';
 import store from './app-store';
 

@@ -1,12 +1,13 @@
-'use strict';
-
 import {observable, action, computed} from 'mobx';
 
 class Store {
   @observable firstName = 'alon';
   @observable lastName = 'Valadji';
 
-  @action setName = ({first = this.firstName, last = this.lastName} = {}) => {
+  @action setName = ({
+    first = this.firstName,
+    last = this.lastName
+  } = {}) => {
     this.firstName = first;
     this.lastName = last;
   };
