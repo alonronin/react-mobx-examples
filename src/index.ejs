@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title></head>
+<body>
+
+<ul>
+  <% htmlWebpackPlugin.options.apps.forEach(function(app){ %>
+    <li><a href="<%= app %>.html"><%= app %></a></li>
+  <% }) %>
+</ul>
+</body>
+</html>

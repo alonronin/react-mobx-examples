@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = module.exports = {
   entry: {
-    bundle: './side-effect',
+    'side-effect': './side-effect',
+    'simple-app': './simple-app',
     vendors: Object.keys(pkg.dependencies)
   },
 
@@ -57,10 +58,6 @@ const config = module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'React + MobX + Webpack Boilerplate'
     })
   ]
 };
@@ -68,3 +65,23 @@ const config = module.exports = {
 if(process.env.NODE_ENV !== 'production') {
   config.module.loaders[0].query.presets.push('react-hmre');
 }
+
+const apps = Object.keys(config.entry).filter(key => key !== 'vendors');
+
+const plugins = apps.map(function(app){
+  return new HtmlWebpackPlugin({
+    title: app,
+    chunks: ['vendors', app],
+    filename: `${app}.html`
+  })
+});
+
+plugins.push(new HtmlWebpackPlugin({
+  title: 'MobX-React-Webpack boilerplate',
+  chunks: [],
+  apps: apps,
+  template: './index.ejs',
+  filename: 'index.html'
+}));
+
+config.plugins.push(...plugins);

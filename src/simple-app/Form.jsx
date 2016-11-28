@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 
-function Form({name, error, setName}) {
+function Form({name, setName}) {
   return <form>
     <label>Name:</label>
     <input type="text" value={name} onChange={e => setName(e.target.value)} />
