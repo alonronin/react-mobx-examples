@@ -3,10 +3,13 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 
-function Form({name, setName}) {
+function Form({name, firstName, lastName, setName}) {
   return <form>
-    <label>Name:</label>
-    <input type="text" value={name} onChange={e => setName(e.target.value)} />
+    <label>First Name:</label>
+    <input type="text" value={firstName} onChange={e => setName({first: e.target.value})} />
+
+    <label>Last Name:</label>
+    <input type="text" value={lastName} onChange={e => setName({last: e.target.value})} />
 
     <p>{name}</p>
   </form>
