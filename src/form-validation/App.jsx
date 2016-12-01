@@ -7,7 +7,10 @@ import Form from './Form';
 function App({store}) {
   return <div>
     <h1>Form Validation</h1>
-    <Form />
+    <Form username={store.username}
+          password={store.password}
+          setProperty={store.setProperty}
+          valid={store.valid} />
   </div>
 }
 
