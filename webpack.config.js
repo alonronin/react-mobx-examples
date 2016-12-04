@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = module.exports = {
   entry: {
+    'change-state': './change-state',
     'side-effect': './side-effect',
     'simple-app': './simple-app',
     'form-validation': './form-validation',
