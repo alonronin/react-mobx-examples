@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = module.exports = {
   entry: {
+    'multi-select': './multi-select',
     'change-state': './change-state',
     'side-effect': './side-effect',
     'simple-app': './simple-app',
@@ -40,6 +41,10 @@ const config = module.exports = {
       {
         test: /\.json$/,
         loader: 'json'
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css?sourceMap']
       }
     ],
 
