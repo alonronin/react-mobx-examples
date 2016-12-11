@@ -1,6 +1,4 @@
-'use strict';
-
-import React, {Component} from 'react';
+import React from 'react';
 import {observer} from 'mobx-react';
 
 function Form({username, password, valid, setProperty}) {

@@ -6,7 +6,7 @@ import 'react-select/dist/react-select.css';
 
 function App({store}) {
   return <div>
-    <Select multi={true}
+    <Select multi
             options={toJS(store.options)}
             onChange={store.update}
             value={toJS(store.values)} />

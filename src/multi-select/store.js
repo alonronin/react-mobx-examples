@@ -1,4 +1,4 @@
-import {observable, action, computed, toJS} from 'mobx';
+import {observable, action} from 'mobx';
 
 class Store {
   @observable options = [

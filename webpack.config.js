@@ -5,11 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = module.exports = {
   entry: {
-    'multi-select': './multi-select',
-    'change-state': './change-state',
-    'side-effect': './side-effect',
     'simple-app': './simple-app',
+    'side-effect': './side-effect',
+    'change-state': './change-state',
     'form-validation': './form-validation',
+    'mobx-react-form': './mobx-react-form',
+    'multi-select': './multi-select',
     vendors: Object.keys(pkg.dependencies)
   },
 
