@@ -1,6 +1,5 @@
 import MobxReactForm from 'mobx-react-form';
 import validatorjs from 'validatorjs';
-import store from './store';
 
 const plugins = { dvr: validatorjs };
 

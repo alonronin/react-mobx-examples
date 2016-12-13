@@ -11,6 +11,7 @@ const config = module.exports = {
     'form-validation': './form-validation',
     'mobx-react-form': './mobx-react-form',
     'multi-select': './multi-select',
+    'date-picker': './date-picker',
     vendors: Object.keys(pkg.dependencies)
   },
 
@@ -80,6 +81,7 @@ const plugins = apps.map(function(app){
   return new HtmlWebpackPlugin({
     title: app,
     chunks: ['vendors', app],
+    template: './inner.ejs',
     filename: `${app}.html`
   })
 });
