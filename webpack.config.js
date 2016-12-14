@@ -30,9 +30,8 @@ const config = module.exports = {
         loader: 'babel',
         query: {
           presets: [
-            'react',
-            'es2015',
-            'stage-1'
+            'latest',
+            'react'
           ],
           plugins: [
             'transform-decorators-legacy',
