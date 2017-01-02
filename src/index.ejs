@@ -7,10 +7,15 @@
 </head>
 <body>
 
-<ul>
-  <% htmlWebpackPlugin.options.apps.forEach(function(app){ %>
-    <li><a href="<%= app %>.html"><%= app %></a></li>
-  <% }) %>
-</ul>
+<div class="container">
+  <h1 class="mt-2 mb-1"><%= htmlWebpackPlugin.options.title %></h1>
+
+  <div class="list-group">
+    <% htmlWebpackPlugin.options.apps.forEach(function(app){ %>
+    <a href="<%= app %>.html" class="list-group-item list-group-item-action"><%= app %></a>
+    <% }) %>
+  </div>
+</div>
+
 </body>
 </html>

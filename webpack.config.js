@@ -12,6 +12,7 @@ const config = module.exports = {
     'mobx-react-form': './mobx-react-form',
     'multi-select': './multi-select',
     'date-picker': './date-picker',
+    'editable-field': './editable-field',
     vendors: Object.keys(pkg.dependencies)
   },
 
