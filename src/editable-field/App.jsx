@@ -28,7 +28,7 @@ function App({store}) {
     <hr className="mb-3"/>
 
     <h5>Store</h5>
-    <pre className="bg-faded p-2 rounded"><code>{JSON.stringify(store, null, 2)}</code></pre>
+    <pre className="bg-faded p-2 rounded"><code>{store.toString()}</code></pre>
   </div>
 }
 

@@ -10,10 +10,7 @@ function App({store}) {
   return <div>
     <Form form={formStore}/>
 
-    <ul>
-      <li>email: {store.email}</li>
-      <li>password: {store.password}</li>
-    </ul>
+    <pre><code>{store.toString()}</code></pre>
   </div>
 }
 
