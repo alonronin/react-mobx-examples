@@ -12,7 +12,14 @@ class List {
         {title: Math.random()}
       ]
     }, 500)
+  }
 
+  toString() {
+    const items = this.items;
+
+    return JSON.stringify({
+      items
+    }, null, 2)
   }
 }
 

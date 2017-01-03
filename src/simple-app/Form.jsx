@@ -2,23 +2,28 @@ import React, {Component} from 'react';
 import {observer} from 'mobx-react';
 
 function Form({
-  name,
   firstName,
   lastName,
   setName
 }) {
-  return <form>
-    <label>First Name:</label>
-    <input type="text"
-           value={firstName}
-           onChange={e => setName({first: e.target.value})} />
+  return <form className="form-inline">
+    <div className="form-group mr-1">
+      <label htmlFor="firstName" className="mr-1">First Name:</label>
+      <input type="text"
+             id="firstName"
+             className="form-control"
+             value={firstName}
+             onChange={e => setName({first: e.target.value})} />
+    </div>
 
-    <label>Last Name:</label>
-    <input type="text"
-           value={lastName}
-           onChange={e => setName({last: e.target.value})} />
-
-    <p>{name}</p>
+    <div className="form-group">
+      <label htmlFor="lastName" className="mr-1">Last Name:</label>
+      <input type="text"
+             id="lastName"
+             className="form-control"
+             value={lastName}
+             onChange={e => setName({last: e.target.value})} />
+    </div>
   </form>
 }
 

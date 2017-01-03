@@ -21,6 +21,18 @@ class Store {
   validate() {
     this.valid = this.username === 'alon' && this.password === '1234';
   }
+
+  toString() {
+    const username = this.username;
+    const password = this.password;
+    const valid = this.valid;
+
+    return JSON.stringify({
+      username,
+      password,
+      valid
+    }, null, 2)
+  }
 }
 
 export default new Store;

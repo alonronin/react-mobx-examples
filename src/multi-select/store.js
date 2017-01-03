@@ -11,6 +11,16 @@ class Store {
   @action update = (values) => {
     this.values = values;
   };
+
+  toString() {
+    const options = this.options;
+    const values = this.values;
+
+    return JSON.stringify({
+      options,
+      values
+    }, null, 2)
+  }
 }
 
 

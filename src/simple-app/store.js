@@ -15,6 +15,18 @@ class Store {
   @computed get name() {
     return `${this.firstName} ${this.lastName}`;
   }
+
+  toString() {
+    const firstName = this.firstName;
+    const lastName = this.lastName;
+    const name = this.name;
+
+    return JSON.stringify({
+      firstName,
+      lastName,
+      name
+    }, null, 2)
+  }
 }
 
 export default new Store;

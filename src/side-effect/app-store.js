@@ -5,6 +5,14 @@ class Store {
 
   @action setEnv = () => {
     this.environment = this.environment == 'TEST' ? 'LIVE' : 'TEST';
+  };
+
+  toString() {
+    const environment = this.environment;
+
+    return JSON.stringify({
+      environment
+    }, null, 2)
   }
 }
 

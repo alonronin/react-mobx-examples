@@ -8,7 +8,7 @@ setTimeout(function(){
 
 function ViewApp({change}) {
   return <div>
-    <button onClick={e => change('live')}>Change to live</button>
+    <button className="btn" onClick={e => change('live')}>Change to live</button>
   </div>
 }
 

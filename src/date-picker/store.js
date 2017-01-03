@@ -9,6 +9,14 @@ class Store {
   };
 
   selectedDays = (day) => DateUtils.isSameDay(day, this.date);
+
+  toString() {
+    const date = this.date;
+
+    return JSON.stringify({
+      date
+    }, null, 2)
+  }
 }
 
 

@@ -2,14 +2,14 @@ import React from 'react';
 import {observer} from 'mobx-react';
 
 function NavBar({env}) {
-  return <p>from navbar: {env}</p>
+  return <p className="text-muted"><label className="text-uppercase">from navbar:</label> {env}</p>
 }
 
 function Header({env, change}) {
   return <div>
-    <p>{env}</p>
+    <p className="lead">this <span className="font-weight-bold">{env}</span> is from header</p>
     <NavBar env={env} />
-    <button onClick={e => change()}>Change Env</button>
+    <button className="btn btn-secondary" onClick={e => change()}>Change Env</button>
   </div>
 }
 
