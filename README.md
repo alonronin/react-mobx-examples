@@ -4,6 +4,6 @@ MobX + React examples
  
 ## Online Demo
 
-https://dist-vkmscvadkt.now.sh
+https://mobx.now.sh
 
 
